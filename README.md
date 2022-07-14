@@ -1,3 +1,14 @@
+# HOPR Chess
+
+## To Do
+
+  - [ ] Add Undo/Resign
+  - [ ] Reset state on new game (currently need to refresh page before new game)
+  - [ ] Improve board UI
+
+## How to Start New Game
+https://user-images.githubusercontent.com/101632255/179000519-29eb66d7-760b-47f9-a399-823b8464d505.mp4
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
