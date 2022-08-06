@@ -73,7 +73,8 @@ function SettingsCard({ hoprAddress }: { hoprAddress: string }) {
             location && dispatch(push(location.pathname + setParam(location, 'apiEndpoint', e.target.value)))
           } />
           <TextField sx={{ width: '25ch' }} id="securityToken" label="Security Token" variant="standard" value={securityToken} onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            dispatch(setSecurityToken(e.target.value))
+            location && dispatch(push(location.pathname + setParam(location, 'securityToken', e.target.value)))
+            // dispatch(setSecurityToken(e.target.value))
           } />
           <TextField id="hoprAddress" label="HOPR Address" variant="standard" value={hoprAddress} />
           <Divider sx={{ m: 2 }} />
@@ -177,6 +178,10 @@ function App() {
 
     if (!getParam(newLocation, 'apiEndpoint')) {
       newLocation.search = setParam(newLocation, 'apiEndpoint', 'http://localhost:13301')
+    }
+
+    if (!getParam(newLocation, 'securityToken')) {
+      newLocation.search = setParam(newLocation, 'securityToken', '^^LOCAL-testing-123^^')
     }
 
     if (newLocation.search !== location.search) {
